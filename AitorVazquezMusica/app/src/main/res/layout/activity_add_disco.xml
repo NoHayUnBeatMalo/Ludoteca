@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <!-- Barra de Herramientas -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <EditText
+        android:id="@+id/etTituloDisco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Título del Disco" />
+
+    <EditText
+        android:id="@+id/etNombreArtistaDisco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Nombre del Artista" />
+
+
+    <EditText
+        android:id="@+id/etDescripcionDisco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripcion"
+        android:inputType="text" />
+    <Button
+        android:id="@+id/btnSeleccionarImagenDisco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Imagen" />
+
+    <ImageView
+        android:id="@+id/imageViewDisco"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:scaleType="centerCrop"/>
+
+
+    <Button
+        android:id="@+id/btnGuardarDisco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Disco" />
+</LinearLayout>

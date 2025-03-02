@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+    <!-- Barra de Herramientas -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Título"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <!-- Imagen Principal -->
+    <ImageView
+        android:id="@+id/imageViewPrincipal"
+        android:layout_width="292dp"
+        android:layout_height="290dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_img" />
+
+    <!-- Datos Generales -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/textViewArtista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Artista"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/textViewAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Álbum"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:paddingBottom="8dp"/>
+    </LinearLayout>
+
+    <!-- Controles de Reproducción (Solo para Canciones) -->
+    <LinearLayout
+        android:id="@+id/layoutControles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingTop="16dp">
+
+
+        <!-- Barra de Progreso de la Canción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:gravity="center">
+
+            <!-- Contador de Tiempo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/textViewTiempoActual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="8dp"
+                    android:text="0:00"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/seekBarProgreso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="100" />
+
+                <TextView
+                    android:id="@+id/textViewDuracion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:text="0:00"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <!-- Botón de Reiniciar -->
+                <Button
+                    android:id="@+id/btnRestart"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:contentDescription="Volver al inicio"
+                    android:src="@drawable/ic_reiniciar" />
+
+                <!-- Botón de Play -->
+                <Button
+                    android:id="@+id/btnPlay"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@null"
+                    android:contentDescription="Reproducir"
+                    android:src="@drawable/ic_play" />
+
+                <!-- Botón de Stop -->
+                <Button
+                    android:id="@+id/btnStop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:contentDescription="Detener"
+                    android:src="@drawable/ic_stop" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

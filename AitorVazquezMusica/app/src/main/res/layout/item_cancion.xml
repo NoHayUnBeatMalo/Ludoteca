@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Barra de Herramientas -->
+    <!-- Título de la Canción -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Título de la Canción"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <!-- Contenedor Imagen + Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Imagen del Álbum -->
+        <ImageView
+            android:id="@+id/imageViewCancion"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_img"
+            android:background="@android:color/darker_gray"
+            android:elevation="4dp"/>
+
+        <!-- Información de la Canción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/textViewArtista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Artista"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textViewAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Álbum"
+                android:textSize="14sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Barra de Progreso de la Canción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:gravity="center">
+
+        <!-- Contador de Tiempo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/textViewTiempoActual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp"
+                android:text="0:00"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seekBarProgreso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/textViewDuracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:text="0:00"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <!-- Botón de Reiniciar -->
+            <ImageButton
+                android:id="@+id/btnReiniciar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:contentDescription="Volver al inicio"
+                android:src="@drawable/ic_reiniciar" />
+
+            <!-- Botón de Play -->
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@null"
+                android:contentDescription="Reproducir"
+                android:src="@drawable/ic_play" />
+
+            <!-- Botón de Stop -->
+            <ImageButton
+                android:id="@+id/btnStop"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:contentDescription="Detener"
+                android:src="@drawable/ic_stop" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Controles del Reproductor -->
+
+</LinearLayout>

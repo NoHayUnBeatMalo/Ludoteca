@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <!-- Barra de Herramientas -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <!-- Título de la canción -->
+    <EditText
+        android:id="@+id/etTituloCancion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título de la canción"
+        android:inputType="text" />
+
+    <!-- Álbum de la canción -->
+    <EditText
+        android:id="@+id/etAlbumCancion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Álbum"
+        android:inputType="text" />
+
+    <!-- Artista de la canción -->
+    <EditText
+        android:id="@+id/etArtistaCancion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Artista"
+        android:inputType="text" />
+    <!-- Seleccionar archivo de audio -->
+    <Button
+        android:id="@+id/btnSeleccionarAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar archivo de audio" />
+
+    <!-- Seleccionar Imagen -->
+    <Button
+        android:id="@+id/btnSeleccionarImagenCancion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar imagen" />
+
+    <!-- Vista previa de la imagen seleccionada -->
+    <ImageView
+        android:id="@+id/imageViewPreviewCancion"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/default_img" />
+
+
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btnGuardarCancion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Canción"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

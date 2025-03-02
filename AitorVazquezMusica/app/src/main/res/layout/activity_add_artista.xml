@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Barra de Herramientas -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <!-- Nombre del Artista -->
+    <EditText
+        android:id="@+id/etNombreArtista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del artista"
+        android:inputType="text" />
+
+    <!-- Álbum del Artista -->
+    <EditText
+        android:id="@+id/etAlbumArtista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Álbum del artista"
+        android:inputType="text" />
+
+    <!-- Seleccionar Imagen -->
+    <Button
+        android:id="@+id/btnSeleccionarImagenArtista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar imagen" />
+
+    <!-- Vista previa de la imagen seleccionada -->
+    <ImageView
+        android:id="@+id/imageViewPreviewArtista"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/default_img" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btnGuardarArtista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Artista"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
